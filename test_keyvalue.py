@@ -8,16 +8,29 @@ class TestKeyValue(unittest.TestCase):
         self.testClass = keyvalue.CRD('keyValue','keyValue')
 
     def test_ifduplicate(self):
-        self.testClass.insert(1,"test")
-        self.assertEquals(self.testClass.insert(1,"test"),"This Key already exists")
+        self.assertEqual(self.testClass.insert("3","testing"),False)
 
     def test_ifValueAdding(self):
-        pass
+        x = self.testClass.insert("3","testing")
+        self.assertEqual(x,True)
+
     def test_ifDeletion(self):
-        pass
+        result = self.testClass.delete("3")
+        self.assertNotEqual(result,0)
+
     def test_nullDeletion(self):
-        pass
+        result = self.testClass.delete("3")
+        self.assertEqual(result,0)
+    
+    def test_ifread(self):
+        result = self.testClass.read("3")
+        self.assertEqual(result,True)
+
 if __name__ =='__main__':
     test = TestKeyValue()
     test.test_connectivity()
+    test.test_ifValueAdding()
     test.test_ifduplicate()
+    test.test_ifread()
+    test.test_ifDeletion()
+    test.test_nullDeletion()
