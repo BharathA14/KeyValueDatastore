@@ -11,14 +11,14 @@
 
 ## Usage
 ```
-from key_value import *
+from keyvalue
 
 #Create an object 
-x = CRD()
+x = keyvalue.CRD('keyValue','keyValuse')  '''The database and the collection name'''
 
 #Add a key-value to the JSON
 
-x.create("Varun", 21)
+x.insert("Varun", 21)
 
 #Read values 
 
