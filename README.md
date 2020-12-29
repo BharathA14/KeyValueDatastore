@@ -7,7 +7,7 @@
 ## General info
 * This project is a simple Key-Value based datastore that supports the basic CRD(Create,Read and Delete) operations.
 * Additional functionalities include a Time-to-live property (optional usage) where the user can set an expiry limit before which we must perform read and delete operations on the key. 
-* YOu need mongo configured on the device on which acts as the server. 
+* You need mongo configured on the device on which acts as the server. 
 
 ## Usage
 ```
